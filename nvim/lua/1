@@ -1,0 +1,25 @@
+local opt = {
+  noremap = true,
+  silent = true,
+}
+
+-- barbar
+vim.keymap.set('n', '<leader>,', '<cmd>BufferPrevious<cr>')
+vim.keymap.set('n', '<leader>.', '<cmd>BufferNext<cr>', opt)
+vim.keymap.set('n', '<leader>H', '<cmd>BufferMovePrevious<cr>', opt)
+vim.keymap.set('n', '<leader>L', '<cmd>BufferMoveNext<cr>', opt)
+vim.keymap.set('n', '<leader>p', '<cmd>BufferPin<cr>', opt)
+vim.keymap.set('n', '<leader>P', '<cmd>BufferClose<cr>', opt)
+
+-- CHADtree
+vim.keymap.set({'n', 'v', 'i'}, '<F1>', '<cmd>CHADopen<cr>')
+
+-- Telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+-- UndoTree
+vim.keymap.set('n', '<F2>', '<cmd>UndotreeToggle<cr>')
