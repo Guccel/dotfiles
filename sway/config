@@ -25,6 +25,8 @@
 set $theme /usr/share/sway/themes/matcha-green
 include $theme/definitions
 
+# background
+    set $background $HOME/.config/sway/backgrounds/manjaro-sway/gruvbox-dark-manjarosway-3840x2160.png
 
 # variables
     include $HOME/.config/sway/config.d/definitions
